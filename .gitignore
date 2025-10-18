@@ -1,0 +1,55 @@
+# Chrome Extension - MZR Summarizer
+# .gitignore file
+
+# Node modules (if you add npm later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build files
+dist/
+build/
+*.zip
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# API Keys (important for security)
+**/secrets.json
+**/config.local.js
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Screenshots and promotional images (keep originals, ignore resized)
+assests/resized/
+
+# Extra documentation files
+extra-stuff/
+*.md.bak
+
+# Private keys
+*.pem
+*.key
+

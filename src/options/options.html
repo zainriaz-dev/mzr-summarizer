@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MZR Summarizer Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <!-- Animated Gradient Bar -->
+    <div class="gradient-bar"></div>
+    
+    <div class="wrap card">
+      <div class="header-section">
+        <h1>Settings</h1>
+        <button id="showInstructions" class="btn-instructions">📖 Setup Instructions</button>
+      </div>
+      <div class="section">
+        <div class="row">
+          <label for="provider">Provider</label>
+          <select id="provider">
+            <option value="auto">Auto (Prefer on-device → Gemini → OpenAI)</option>
+            <option value="gemini">Gemini</option>
+            <option value="openai">OpenAI</option>
+          </select>
+        </div>
+        <div class="row">
+          <span>Use on-device AI (if available)</span>
+          <input id="useOnDevice" type="checkbox" />
+        </div>
+      </div>
+      <div class="info-note">
+        <strong>💡 Quick Tip:</strong> If models don't load, try refreshing this page after entering your API keys. 
+        Make sure your API keys are correct and have the necessary permissions.
+      </div>
+      <div class="grid-2">
+        <div class="card subtle">
+          <div class="card-header">
+            <h2>🔮 Google Gemini</h2>
+            <span class="badge free">Free Tier</span>
+          </div>
+          <label class="row">
+            <span>API Key</span>
+            <input id="geminiApiKey" type="password" placeholder="AIza..." />
+          </label>
+          <div class="help-text">
+            Get your free API key: <a href="https://ai.google.dev" target="_blank">ai.google.dev</a>
+          </div>
+          <label class="row">
+            <span>Model</span>
+            <select id="geminiModel">
+              <option value="gemini-1.5-flash-001" selected>gemini-1.5-flash-001</option>
+              <option value="gemini-1.5-pro-001">gemini-1.5-pro-001</option>
+              <option value="gemini-1.5-flash-8b-001">gemini-1.5-flash-8b-001</option>
+              <option value="gemini-1.5-flash-latest">gemini-1.5-flash-latest</option>
+              <option value="gemini-1.5-pro-latest">gemini-1.5-pro-latest</option>
+            </select>
+          </label>
+          <div class="row">
+            <span>Load Models</span>
+            <div class="inline">
+              <button id="fetchGeminiModels" class="btn-fetch">🔄 Fetch</button>
+              <span id="geminiModelsStatus" class="hint"></span>
+            </div>
+          </div>
+        </div>
+        <div class="card subtle">
+          <div class="card-header">
+            <h2>🤖 OpenAI</h2>
+            <span class="badge paid">Paid</span>
+          </div>
+          <label class="row">
+            <span>API Key</span>
+            <input id="openaiApiKey" type="password" placeholder="sk-..." />
+          </label>
+          <div class="help-text">
+            Get your API key: <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com</a>
+          </div>
+          <label class="row">
+            <span>Model</span>
+            <select id="openaiModel">
+              <option value="gpt-4o-mini" selected>gpt-4o-mini (Recommended)</option>
+              <option value="gpt-4o">gpt-4o</option>
+              <option value="gpt-4-turbo">gpt-4-turbo</option>
+              <option value="gpt-4">gpt-4</option>
+              <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+            </select>
+          </label>
+          <div class="row">
+            <span>Load Models</span>
+            <div class="inline">
+              <button id="fetchOpenAIModels" class="btn-fetch">🔄 Fetch</button>
+              <span id="openaiModelsStatus" class="hint"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="save">💾 Save</button>
+        <span id="status"></span>
+      </div>
+      <div class="info" id="providerInfo"></div>
+      <div class="footer-links">
+        <a href="../about/about.html" target="_blank" class="link-about">ℹ️ About</a>
+        <a href="https://github.com/zainriaz-dev/mzr-summarizer" target="_blank" class="link-github">⭐ Star on GitHub</a>
+      </div>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div id="instructionsModal" class="modal">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h2>📖 Setup Instructions</h2>
+        <div class="modal-controls">
+          <button id="modal-text-smaller" class="modal-text-btn" title="Smaller Text">A−</button>
+          <button id="modal-text-larger" class="modal-text-btn" title="Larger Text">A+</button>
+          <button class="modal-close" id="closeModal">×</button>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody">
+          <div class="instruction-section">
+            <h3>🔮 Google Gemini Setup (Free)</h3>
+            <ol>
+              <li>Visit <a href="https://ai.google.dev" target="_blank">ai.google.dev</a></li>
+              <li>Click "Get API Key" and sign in with your Google account</li>
+              <li>Create a new API key or use an existing one</li>
+              <li>Copy the key (starts with "AIza...")</li>
+              <li>Paste it in the "Gemini API Key" field above</li>
+              <li>Click "🔄 Fetch" to load available models</li>
+              <li>Select your preferred model (gemini-1.5-flash-001 recommended)</li>
+              <li>Click "💾 Save" to save your settings</li>
+            </ol>
+            <p class="note">✅ Gemini offers a generous free tier!</p>
+          </div>
+
+          <div class="instruction-section">
+            <h3>🤖 OpenAI Setup (Paid)</h3>
+            <ol>
+              <li>Visit <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com</a></li>
+              <li>Sign in or create an account</li>
+              <li>Click "Create new secret key"</li>
+              <li>Copy the key (starts with "sk-...")</li>
+              <li>Paste it in the "OpenAI API Key" field above</li>
+              <li>Click "🔄 Fetch" to load available models (or use the default)</li>
+              <li>Select your preferred model (gpt-4o-mini recommended for cost)</li>
+              <li>Click "💾 Save" to save your settings</li>
+            </ol>
+            <p class="note">⚠️ OpenAI requires payment info. Check pricing at <a href="https://openai.com/pricing" target="_blank">openai.com/pricing</a></p>
+          </div>
+
+          <div class="instruction-section">
+            <h3>🎯 Usage Tips</h3>
+            <ul>
+              <li><strong>Provider Selection:</strong> "Auto" tries on-device AI first, then Gemini, then OpenAI</li>
+              <li><strong>On-device AI:</strong> Available in Chrome 120+ (experimental). No API key needed!</li>
+              <li><strong>Keyboard Shortcut:</strong> Press Ctrl+Shift+S to summarize any page</li>
+              <li><strong>Text Selection:</strong> Select text on any page and click the AI bubble</li>
+              <li><strong>Export Options:</strong> Copy to clipboard, download as Markdown, or plain text</li>
+              <li><strong>History:</strong> Last 10 summaries are saved in the popup</li>
+            </ul>
+          </div>
+
+          <div class="instruction-section">
+            <h3>❓ Troubleshooting</h3>
+            <ul>
+              <li><strong>Models not loading?</strong> Make sure your API key is correct and try refreshing this page</li>
+              <li><strong>API errors?</strong> Check your API key permissions and billing status</li>
+              <li><strong>Extension not working?</strong> Try reloading the extension from chrome://extensions</li>
+              <li><strong>Context invalidated error?</strong> Refresh the webpage you're trying to summarize</li>
+            </ul>
+          </div>
+
+          <div class="instruction-section">
+            <h3>🔒 Privacy</h3>
+            <p>Your API keys are stored securely in Chrome's local storage and never leave your browser except when making API calls to the respective services. We don't collect or track any data.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="closeModalBtn" class="btn-primary">Got it!</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
+
+
