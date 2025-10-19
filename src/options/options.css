@@ -39,6 +39,8 @@ input[type="text"], input[type="password"], select { width: 100%; box-sizing: bo
 .footer-links { display: flex; gap: 12px; justify-content: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(148,163,184,.2); }
 .link-about, .link-github { color: #60a5fa; text-decoration: none; font-size: 14px; }
 .link-about:hover, .link-github:hover { text-decoration: underline; }
+.privacy-link { color: #60a5fa; text-decoration: none; font-size: 14px; }
+.privacy-link:hover { text-decoration: underline; }
 .section { margin-bottom: 12px; }
 .inline { display: inline-flex; gap: 10px; align-items: center; }
 .hint { font-size: 12px; color: #94a3b8; }

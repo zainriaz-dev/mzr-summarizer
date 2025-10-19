@@ -45,6 +45,7 @@ Transform lengthy web pages into concise, actionable summaries with MZR Summariz
 - No tracking or analytics
 - Your API keys stay secure
 - Open source and transparent
+- [Read our Privacy Policy](https://mzr-summarizer.zainriaz.dev/Privacy)
 
 ## 🚀 Installation
 

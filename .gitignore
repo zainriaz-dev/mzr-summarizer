@@ -53,3 +53,6 @@ extra-stuff/
 *.pem
 *.key
 
+# Website files (exclude from extension repo)
+web/
+
