@@ -2,7 +2,7 @@
 
 Transform lengthy web pages into concise, actionable summaries with MZR Summarizer - your AI-powered reading assistant.
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-brightgreen)](https://chrome.google.com/webstore)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-brightgreen)](https://mzr-summarizer.zainriaz.dev/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.2.3-orange.svg)](manifest.json)
 
