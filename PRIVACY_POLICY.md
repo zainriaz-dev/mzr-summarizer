@@ -202,7 +202,11 @@ We may update this Privacy Policy from time to time to reflect:
 **How We Notify You:**
 - Updated "Last Updated" date at the top of this policy
 - Significant changes will be communicated through the Chrome Web Store listing
+<<<<<<< HEAD
 - You can always find the latest version at: https://github.com/zainriaz-dev/mzr-summarizer/blob/main/PRIVACY_POLICY.md or https://mzr-summarizer.zainriaz.dev/Privacy
+=======
+- You can always find the latest version at: https://github.com/zainriaz-dev/mzr-summarizer/PRIVACY_POLICY.md
+>>>>>>> 059a79c00df9d2cee635cc74a7a70e0d0ceeef30
 
 ## Open Source Transparency
 
@@ -250,11 +254,20 @@ We will respond to privacy inquiries within 30 days.
 
 By installing and using MZR Summarizer, you acknowledge that you have read and understood this Privacy Policy.
 
+<<<<<<< HEAD
 **Last Updated:** January 2025  
 **Version:** 1.0  
 **Effective Date:** January 2025
+=======
+**Last Updated:** October 2025  
+**Version:** 1.0  
+**Effective Date:** October 2025
+>>>>>>> 059a79c00df9d2cee635cc74a7a70e0d0ceeef30
 
 ---
 
 *This privacy policy is provided in good faith to ensure transparency and build trust with our users. MZR Summarizer is committed to protecting your privacy and maintaining the highest standards of data security.*
+<<<<<<< HEAD
 
+=======
+>>>>>>> 059a79c00df9d2cee635cc74a7a70e0d0ceeef30
