@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "MZR Summarizer - AI Page Summary",
   "description": "Powerful AI summarizer with Gemini & OpenAI. Summarize pages instantly with customizable length & export options.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "Zain Riaz",
   "homepage_url": "https://mzr-summarizer.zainriaz.dev/",
   "privacy_policy": "https://mzr-summarizer.zainriaz.dev/Privacy",
@@ -33,8 +33,7 @@
     "activeTab",
     "tabs",
     "scripting",
-    "contextMenus",
-    "downloads"
+    "contextMenus"
   ],
   "host_permissions": [
     "<all_urls>"
